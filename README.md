@@ -1,4 +1,4 @@
-# DKCoins - Minecraft CoinSystem
+# DKCoins-Reloaded - Minecraft CoinSystem
 
 Official page:
 <https://www.spigotmc.org/resources/dkcoins-coinsystem-mysql-sqlite-mongodb-json-german-english.39159/>
@@ -203,6 +203,3 @@ event.getColor(); //get the update cause
 ## License
 
 This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for more informations.
-
-## Support/Discord
-[![Join DKPlugins Discord](https://discordapp.com/api/guilds/513441444959223809/embed.png?style=banner2)](https://discord.gg/PawBsVy)
