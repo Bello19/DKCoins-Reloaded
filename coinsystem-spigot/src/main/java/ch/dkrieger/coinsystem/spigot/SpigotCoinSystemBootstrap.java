@@ -4,6 +4,7 @@ import ch.dkrieger.coinsystem.core.CoinSystem;
 import ch.dkrieger.coinsystem.core.DKCoinsPlatform;
 import ch.dkrieger.coinsystem.core.event.CoinChangeEventResult;
 import ch.dkrieger.coinsystem.core.event.CoinsUpdateCause;
+import ch.dkrieger.coinsystem.core.log.Logger;
 import ch.dkrieger.coinsystem.core.manager.MessageManager;
 import ch.dkrieger.coinsystem.core.player.CoinPlayer;
 import ch.dkrieger.coinsystem.core.player.PlayerColor;
@@ -93,6 +94,11 @@ public class SpigotCoinSystemBootstrap extends JavaPlugin implements DKCoinsPlat
 		BukkitCoinPlayerCoinsChangeEvent event = new BukkitCoinPlayerCoinsChangeEvent(player,oldCoins,newCoins,cause,message);
 		Bukkit.getPluginManager().callEvent(event);
 		return new CoinChangeEventResult(event.isCancelled(),event.getNewCoins());
+	}
+
+	@Override
+	public Logger getLogger(){
+
 	}
 
 	private void registerCommand(Command command){

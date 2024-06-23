@@ -8,6 +8,7 @@ package ch.dkrieger.coinsystem.core;
 
 import ch.dkrieger.coinsystem.core.event.CoinChangeEventResult;
 import ch.dkrieger.coinsystem.core.event.CoinsUpdateCause;
+import ch.dkrieger.coinsystem.core.log.Logger;
 import ch.dkrieger.coinsystem.core.player.CoinPlayer;
 
 import java.io.File;
@@ -19,6 +20,8 @@ public interface DKCoinsPlatform {
     String getServerVersion();
 
     File getFolder();
+
+    Logger getLogger();
 
     String getColor(CoinPlayer player);
 

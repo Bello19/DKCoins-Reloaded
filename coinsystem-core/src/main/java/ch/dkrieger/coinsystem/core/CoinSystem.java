@@ -7,6 +7,7 @@ package ch.dkrieger.coinsystem.core;
  */
 
 import ch.dkrieger.coinsystem.core.config.Config;
+import ch.dkrieger.coinsystem.core.log.Logger;
 import ch.dkrieger.coinsystem.core.manager.MessageManager;
 import ch.dkrieger.coinsystem.core.player.CoinPlayerManager;
 import ch.dkrieger.coinsystem.core.storage.CoinStorage;
@@ -28,11 +29,13 @@ public class CoinSystem {
     private CoinStorage storage;
     private Config config;
     private UpdateChecker updateChecker;
+    private static Logger logger;
 
     public CoinSystem(DKCoinsPlatform platform) {
         INSTANCE = this;
         this.version = "3.1.9";
         this.platform = platform;
+        logger = platform.getLogger();
 
         new MessageManager("DKCoins");
         System.out.println("["+MessageManager.getInstance().system_name+"] plugin is starting");
@@ -119,4 +122,9 @@ public class CoinSystem {
     public static CoinSystem getInstance() {
         return INSTANCE;
     }
+
+    public static Logger getLogger() {
+        return logger;
+    }
+
 }
